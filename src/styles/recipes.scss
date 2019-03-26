@@ -1,0 +1,150 @@
+.border-tlr-radius { 
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px; 
+}
+
+.text-center { text-align: center; }
+
+.radius { border-radius: 2px; }
+
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+
+.shadowDepth {
+   box-shadow: 
+  		0 1px 3px rgba(0,0,0, 0.12),
+    	0 1px 2px rgba(0,0,0, 0.24);      
+}
+
+@keyframes pending {
+    0%  {
+      transform: scaleX(0);
+      transform-origin: 0 0;
+    } 
+    50% {
+      transform: scaleX(1);
+      transform-origin: 0 0;
+    }
+    51% {
+      transform-origin: 100% 0;
+    }
+    100% {
+      transform: scaleX(0);
+      transform-origin: 100% 0;
+    }
+}
+
+.loading {
+    position: relative;
+    margin: 0 auto;
+    max-width: 200px;
+    margin: 0 auto 30px;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background:$primary-color;
+      transform-origin: 0 0;
+      transform: scaleX(0);
+      animation: pending 1.5s ease infinite;
+    }
+}
+
+.recipe {
+	background-color: #fff;
+    // margin-bottom: 1.6rem;
+    
+    .recipe__padding {
+        padding: 1rem;
+    }
+    
+    .recipe__image {
+        min-height: 100px;
+        background-color: #eee;
+        
+        img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    .recipe__content {
+        position: relative;
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    .recipe__meta {
+         > span, time {
+            font-size: 0.8rem;
+            color:$secondary-text;
+        }
+
+        > span{
+            margin-right: 0.5rem;
+        }
+
+        .Rating {
+            float: right;
+            cursor: pointer;
+        }
+    }
+
+    .recipe__article {
+        
+        h2 {
+            line-height: 2;
+            margin-bottom: 0.2rem;
+            text-decoration: none;
+            color: #444;
+            transition: all 0.5s ease;   
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            font-size: 1.2rem;
+
+            &:hover{
+                color: #2980b9;
+            }
+        }
+
+        p {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: black;
+        }
+
+        .match{
+            background: #ffc600;
+        }
+    }
+
+    .recipe__action {
+        overflow: hidden;
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+	 
+    .recipe__author {
+        img{
+            border-radius: 50%;
+            margin-right: 0.6em;
+            display: inline-block;
+            vertical-align: middle;
+    
+        }
+    }
+
+	.recipe__author-content {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,232 @@
+.RecipeDetails {
+  max-width: 95%;
+  margin: 2rem auto;
+  background-color: white;
+  height: auto;
+
+  img {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  &__wrapper {
+    box-shadow:-1px 1px 3px -1px rgba(0, 0, 0, 0.45);
+    display: block;
+    position: relative;
+    background-color: white;
+    display: block;
+    padding: 3rem;
+  }
+
+  &--goback {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color:#222;
+    width: 0;
+    height: 0;
+    border-top: 60px solid $primary-color;
+    border-right: 60px solid transparent;
+
+    i {
+      font-size:20px;
+      position: relative;
+      top: -52px;
+      left: 10px;
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    right: 0.1rem;
+    top: 2.8rem;
+    color: #222;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+  }
+
+  &__left {
+    display: inline-block;
+    padding-right: 4%;
+    vertical-align: top;
+    width: 46%;
+    margin-bottom: 1rem;
+  }
+
+  &__right {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+  }
+
+  &__bottom{
+    border-top:1px solid #ccc; 
+    position:relative; 
+  
+    &__meta{
+      margin: 1rem auto 0;    
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;    
+        text-align: center;
+
+        li {
+          display: inline-block;
+          position: relative;
+          font-size: 0.8rem;
+          color: black;
+          text-align: center;
+          text-decoration: none;
+          padding: 0.4rem 0.6rem;
+          border-right: 1px dashed lighten($primary-color,15%);
+          cursor: pointer;
+          .fa {
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 10px;
+          }
+          &:hover {        
+            color: lighten($primary-color,10%);
+            ul {
+              display: block;
+            }
+          }
+        }
+        li:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width:650px){
+    max-width: 100%;
+    margin: 0;
+
+    &__wrapper{
+      padding: 3rem 2rem;
+    }
+
+    &__left, &__right, &__bottom {
+      width:100%;
+    }
+    
+    .App .RecipeDetails &__left{
+      padding-right:0;
+      margin: 0;
+
+      &__image{
+        display:inline-block; 
+        width:100%; 
+        vertical-align:top; 
+        padding: 10px 10px 0 0px;
+        margin: 1rem 0;
+  
+        img{
+          height: auto;
+        }
+      }      
+    }
+
+    .App .RecipeDetails &__right {
+      &__ingredients {
+        ul {
+          column-count: 1;
+          margin: 0;
+          padding: 0.5rem;
+          font-size:1rem;
+        }
+      }
+    }
+  }
+
+  .RecipeDetails__left__title {
+    color:#222;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: -2px;
+  }
+
+  .RecipeDetails__left__headline {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 0.4rem;
+  }
+
+  .RecipeDetails__left__image {
+    padding: 10px 10px 0 10px;
+  
+    img {
+      width: 100%;
+      height: 320px;
+    }
+
+    .Rating {
+      text-align: center;
+      margin: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .RecipeDetails__right__description {line-height:1.4;}
+
+  .RecipeDetails__right__ingredients {
+    margin-top: 1rem;
+
+    h1 {
+      font-size: 1.4rem;
+      color: #888;
+    }
+
+    ul {
+      margin: 0.8rem 0 0.6em 0.5em;
+      column-count: 2;
+      li {
+        padding: .4em 0 .4em 0;
+        font-size: 2em;
+        cursor: pointer;
+        &:hover {
+          &:before {
+            color: white;
+            background-color: lighten($primary-color, 8%);
+          }
+        }
+        &:before {
+          content: "\2713 ";
+          font-size: 0.8rem;
+          margin-left: -0.2rem;
+          margin-right: 0.3rem;
+          padding: 0.2rem 0 0.1rem .4rem;;          
+          position: relative;
+          color: white;
+          background-color: $primary-color;
+          border-radius: 50%;
+        }
+        list-style-type: none;
+        font: {
+          size: 0.8rem;
+        }
+        a {
+          color: lighten(#859a31, 0%);
+          text-decoration: none;
+          &:hover {
+            border-bottom: .3rem solid;
+          }
+        }
+        margin-bottom: .1rem;
+        color: lighten(black, 40%);
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  i.fa-star{color:#aaa; display:inline-block;}
+  i.fa-star.Rating{color: rgb(232, 217, 31);}
+}

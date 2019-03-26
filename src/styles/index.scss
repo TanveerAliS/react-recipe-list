@@ -1,0 +1,79 @@
+
+
+$primary-color:rgb(145, 193, 30);
+$primary-background: #f8f8f8;
+$secondary-text:#b0aba3;
+$hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+$returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+@import './recipes.scss';
+@import './recipesDetails.scss';
+@import './reset.scss';
+@import './favorite.scss';
+@import './searchBar.scss';
+@import './noMatch.scss';
+
+/* Flex styles -------------------------------------------------*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .Recipes__header{
+    padding: 2rem;
+
+    .SearchBar__input{
+      width: 95%;
+    }
+  }
+  .Recipes__container{
+    padding: 0 2rem;
+
+    .Recipes__container--cards{
+      .recipe__meta > span {
+        font-size:1rem;
+      }
+    }
+  }
+}
+
+
+/* Grid styles -------------------------------------------------*/
+.Recipes__container--cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+
+/* Generic styles ----------------------------------------------*/
+body {
+  font-family: "Courier new";
+  background-color: $primary-background;
+}
+
+header {
+  padding: 2rem 3rem;
+  font-size: 2em;
+  color: white;
+  max-width: 960px;
+  margin: 0 auto;
+
+  .logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+}
+
+.Recipes__container--cards {
+  max-width: 960px;
+  margin: 0 auto 30px;
+
+  a {
+    text-decoration: none;
+  }
+}
+

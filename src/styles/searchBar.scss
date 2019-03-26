@@ -1,0 +1,56 @@
+.SearchBar {
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+  
+  &__input {
+    display: block;
+    width: 98%;
+    padding: .5rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out;
+
+    &:not(:valid) ~ .SearchBar__clear {
+      display: none;
+    }  
+  }
+
+  &__clear {
+    border:1px solid transparent;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+
+    &:after {
+      content: "X";
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background-color: $primary-color;
+      z-index:1;
+      right: 20px;
+      top: 0;
+      bottom: 30px;
+      margin: auto;
+      padding: 2px;
+      border-radius: 50%;
+      text-align: center;
+      color: white;
+      font-weight: normal;
+      font-size: 12px;
+      box-shadow: 0 0 2px $primary-color;
+      cursor: pointer;
+    }
+  }
+}
