@@ -1,7 +1,7 @@
 ### Coding Challenge
 
 #### Instructions to run the app
-- ## Step 1 - Dependencies
+## Step 1 - Dependencies
 
 You will need:
 
