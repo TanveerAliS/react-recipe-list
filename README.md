@@ -1,5 +1,3 @@
-### Coding Challenge
-
 #### Instructions to run the app
 ## Step 1 - Dependencies
 
