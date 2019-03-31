@@ -20,7 +20,7 @@ $ https://github.com/TanveerAliS/react-recipe-list.git
 ## Step 3 - Install dependencies
 
 ```sh
-$ cd helloFresh-TanveerAli
+$ cd react-recipe-list
 $ npm install
 ```
 
