@@ -14,7 +14,7 @@ Please install them if you don't have them already.
 From the command line, clone the repository:
 
 ```sh
-$ git clone https://github.com/hellofreshdevtests/TanveerAliS-frontend-react-test.git
+$ https://github.com/TanveerAliS/react-recipe-list.git
 ```
 
 ## Step 3 - Install dependencies
