@@ -1,4 +1,6 @@
 #### Instructions to run the app
+## [Demo](https://react-recipes-app.tanveeralims.now.sh/)
+
 ## Step 1 - Dependencies
 
 You will need:

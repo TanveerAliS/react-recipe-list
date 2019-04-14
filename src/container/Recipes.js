@@ -17,7 +17,6 @@
 */
 
 import React, { Component, Fragment } from 'react';
-import logo from '../assets/hellofresh-logo.svg';
 import Rating from "../components/Rating";
 import SearchBar from "../components/SearchBar";
 import Favorite from '../components/Favorite';
@@ -75,7 +74,6 @@ class Recipes extends Component {
     return (
       <Fragment>
         <header className="Recipes__header">
-          <img src={logo} alt="logo" />
           <SearchBar filterText={this.state.filterText} onFilterTextInput={this.handleFilterTextInput} handleClearText={this.clearText} />
         </header>
         <div className="Recipes__container">
